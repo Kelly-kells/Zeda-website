@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./navbar.css"
+import { IoMdArrowDropdown } from "react-icons/io";
 import logo from "../Assets/smartdata-high-resolution-logo-transparent.png"
 
 const Navbar = () => {
@@ -10,25 +11,28 @@ const Navbar = () => {
   const toggleDropdown2 = () => setDropdown2(!dropdown2);
 
   return (
-    <nav className="flex bg-gray-800 p-4">
-    <div className="container mx-auto flex justify-between items-center">
+    <nav className="flex bg-white shadow-lg shadow-lime-300/50 p-4">
+    <div className="container mx-auto flex  items-center">
       <img className='logo' src={logo} alt="" />
-      <div className="hidden md:flex flex-grow justify-end space-x-4">
-        <div className="group relative">
-          <button className="text-white hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown1}>
-            Home
+      <div className="hidden md:flex flex-grow justify-center space-x-4">
+        <div className="">
+          <button className="text-black hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown1}>Home <IoMdArrowDropdown />
+            
           </button>
           {dropdown1 && (
+
+
             <div className="absolute hidden mt-2 space-y-2 bg-gray-800 border border-gray-700">
               <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Sublink 1</a>
               <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Sublink 2</a>
               <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Sublink 3</a>
             </div>
+
           )}
         </div>
 
         <div className="group relative">
-          <button className="text-white hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown2}>
+          <button className="text-black hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown2}>
             Company
           </button>
           {dropdown2 && (
@@ -39,6 +43,52 @@ const Navbar = () => {
               <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Values</a>
               </div>
             </div>
+          )}
+        </div>
+
+        <div className="group relative">
+          <button className="text-black hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown2}>
+            IT services
+          </button>
+          {dropdown2 && (
+            <div className=" hidden mt-2 space-y-2 bg-gray-800 border border-gray-700">
+              <div className='block'>
+              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">About Us</a>
+              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Mission</a>
+              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Values</a>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="group relative">
+          <button className="text-black hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown2}>
+            News & media
+          </button>
+          {dropdown2 && (
+            <div className=" hidden mt-2 space-y-2 bg-gray-800 border border-gray-700">
+              <div className='block'>
+              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">About Us</a>
+              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Mission</a>
+              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Values</a>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="group relative">
+          <button className="text-black hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown2}>
+            Features
+          </button>
+          {dropdown2 && (
+            <div className=" hidden mt-2 space-y-2 bg-gray-800 border border-gray-700">
+              <div className='block'>
+              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">About Us</a>
+              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Mission</a>
+              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Values</a>
+              </div>
+            </div>
+            
           )}
         </div>
 
