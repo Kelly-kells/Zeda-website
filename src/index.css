@@ -18,12 +18,16 @@ body{
     background-size: cover; /* Adjust as needed */
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
+    
     
 }
+.container{
+  width: 96%;
+}
+
 @layer components {
   .max-container {
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 0 auto;
   }
 
