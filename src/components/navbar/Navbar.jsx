@@ -1,131 +1,38 @@
-import React, { useState } from 'react';
-import "./navbar.css"
-import { IoMdArrowDropdown } from "react-icons/io";
-import logo from "../Assets/smartdata-high-resolution-logo-transparent.png"
+import React from 'react';
+import logo from "../Assets/smartdata.png";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdContact } from "react-icons/io";
+import { navLinks } from '../../constants';
+import "./navbar.css";
 
 const Navbar = () => {
-  const [dropdown1, setDropdown1] = useState(false);
-  const [dropdown2, setDropdown2] = useState(false);
-
-  const toggleDropdown1 = () => setDropdown1(!dropdown1);
-  const toggleDropdown2 = () => setDropdown2(!dropdown2);
-
   return (
-    <nav className="flex bg-white shadow-lg shadow-lime-300/50 p-4">
-    <div className="container mx-auto flex  items-center">
-      <img className='logo' src={logo} alt="" />
-      <div className="hidden md:flex flex-grow justify-center space-x-4">
-        <div className="">
-          <button className="text-black hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown1}>Home <IoMdArrowDropdown />
-            
-          </button>
-          {dropdown1 && (
-
-
-            <div className="absolute hidden mt-2 space-y-2 bg-gray-800 border border-gray-700">
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Sublink 1</a>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Sublink 2</a>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Sublink 3</a>
-            </div>
-
-          )}
+    <header className='padding-x py-8 z-10 w-full bg-black'>
+      <nav className='flex justify-between items-center max-container'>
+        <a href="/">
+          <img src={logo} alt="logo" />
+        </a>
+        <ul className='flex-1 flex justify-center gap-10 max-lg:hidden ml-28'>
+          {navLinks.map((item) => (
+            <li key={item.label}>
+              <a href={item.href} className='font-monserrat leading-normal text-white text-md relative'>
+                {item.label}
+                <span className="absolute bottom-0 left-0 bg-green-500 h-1 w-full transform scale-x-0 origin-left transition-transform hover:scale-x-100 active:scale-x-100"></span>
+              </a>
+            </li>
+          ))}
+          <button className='bg-white p-2 rounded'>Request a quote</button>
+          <a href="#contact" className='flex items-center font-monserrat leading-normal text-white text-lg' >
+            <IoMdContact size={20} color="green" />
+            Login
+          </a>
+        </ul>
+        <div className='hidden max-lg:block'>
+          <GiHamburgerMenu color='white' size={40} />
         </div>
-
-        <div className="group relative">
-          <button className="text-black hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown2}>
-            Company
-          </button>
-          {dropdown2 && (
-            <div className=" hidden mt-2 space-y-2 bg-gray-800 border border-gray-700">
-              <div className='block'>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">About Us</a>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Mission</a>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Values</a>
-              </div>
-            </div>
-          )}
-        </div>
-
-        <div className="group relative">
-          <button className="text-black hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown2}>
-            IT services
-          </button>
-          {dropdown2 && (
-            <div className=" hidden mt-2 space-y-2 bg-gray-800 border border-gray-700">
-              <div className='block'>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">About Us</a>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Mission</a>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Values</a>
-              </div>
-            </div>
-          )}
-        </div>
-
-        <div className="group relative">
-          <button className="text-black hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown2}>
-            News & media
-          </button>
-          {dropdown2 && (
-            <div className=" hidden mt-2 space-y-2 bg-gray-800 border border-gray-700">
-              <div className='block'>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">About Us</a>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Mission</a>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Values</a>
-              </div>
-            </div>
-          )}
-        </div>
-
-        <div className="group relative">
-          <button className="text-black hover:text-gray-300 focus:outline-none focus:border-opacity-0" onClick={toggleDropdown2}>
-            Features
-          </button>
-          {dropdown2 && (
-            <div className=" hidden mt-2 space-y-2 bg-gray-800 border border-gray-700">
-              <div className='block'>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">About Us</a>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Mission</a>
-              <a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Values</a>
-              </div>
-            </div>
-            
-          )}
-        </div>
-
-        {/* Add other links here */}
-
-      </div>
-
-      {/* Add other buttons or components as needed */}
-
-      {/* Mobile Menu Button */}
-      <div className="md:hidden">
-        <button id="mobile-menu-btn" className="text-white focus:outline-none">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    {/* Mobile Menu */}
-    <div id="mobile-menu" className="md:hidden hidden bg-gray-800 p-4">
-      {/* Render mobile menu links here */}
-    </div>
-  </nav>
-);
+      </nav>
+    </header>
+  );
 };
 
-
-
-
-
-
-
-
-
-
-  
-
 export default Navbar;
-;
