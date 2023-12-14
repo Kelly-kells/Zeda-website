@@ -13,18 +13,16 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-body{
-    background-image: url(../src/components/Assets/bench-accounting-C3V88BOoRoM-unsplash.jpg);
-    background-size: cover; /* Adjust as needed */
+
+.section-container{
+  width: 94%;
+}
+.hero-bg{
+  background-image: url(../../zeda-website/src/components/Assets/office.jpg);
+  background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
-    
-    
 }
-.container{
-  width: 96%;
-}
-
 @layer components {
   .max-container {
     max-width: 1400px;
