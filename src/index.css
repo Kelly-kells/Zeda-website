@@ -13,9 +13,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
-.section-container{
-  width: 94%;
+ 
+.container{
+  width: 96%;
 }
 .hero-bg{
   background-image: url(../../zeda-website/src/components/Assets/office.jpg);

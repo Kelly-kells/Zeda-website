@@ -6,7 +6,7 @@ const Hero = () => {
    <section id='home' className='w-full 
     justify-center min-h-screen xl:flex-row flex-col gap-10 hero-bg'>
       
-      <div className='relative xl:w-2/5 flex flex-col justify-center w-full max-xl:padding-x pt-28 text-white  section-container '>
+      <div className='relative xl:w-2/5 flex flex-col justify-center w-full max-xl:padding-x pt-28 text-white ml-10 section-container '>
   <h1 className='text-5xl font-bold'> We Run All Kinds Of Services That Vow Your success</h1>
   <p className='font-medium mt-5'>We are experienced profesionals who understand that our servies are changing Lorem 
     ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit. </p>
