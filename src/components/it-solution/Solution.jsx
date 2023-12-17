@@ -1,11 +1,12 @@
 import React from 'react'
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { TbSettingsFilled } from "react-icons/tb";
 import "./solution.css"
 
 
 const Solution = () => {
   return (
-    <section className='w-full min-h-screen bg-slate-900' id="solutions">
+    <section className='w-full  bg-slate-900' id="solutions">
   <div className='flex items-center justify-center flex-col md:flex-row lg:flex-row container'>
     <div className="flex-1 text-white mt-14 text-center md:text-left lg:text-left">
       <span className="absolute bottom-1px left-0 ml-10 bg-green-500 h-1 w-60 "></span>
@@ -15,7 +16,7 @@ const Solution = () => {
     <div className="flex-1 text-white mt-8 text-center md:ml-6 lg:ml-6">
       <h2 className='mt-4'>As one of the world's largest <br />IT/service providers with over<br />
         120 engineers and IT support staff<br />are ready to help</h2>
-      <button className='rounded bg-green-500 w-36 h-8 mt-3'>Our pricing</button>
+      <button className='rounded bg-green-500 w-36 h-8 mt-3 btn'>Our pricing</button>
     </div>
 
     <div className="flex-1 text-white mt-6 text-center md:ml-6 lg:ml-6">
@@ -24,7 +25,32 @@ const Solution = () => {
     </div>
   </div>
 
-  <div>
+  <div className='justify-center text-white  flex lg:ml-10 sm:ml-0 mt-12'>
+    <div className='flex-1 w-20 m-8'>
+    <TbSettingsFilled color='grey' size={50} />
+    <article >Software Assets</article>
+      <small>
+        All aspects of Your Software including purchasing deployment and maintainance
+      </small>
+    </div>
+
+    <div className='flex-1  m-8'>
+    <TbSettingsFilled color='grey' size={50} />
+    <article >Software Assets</article>
+      <small>
+        All aspects of Your Software including purchasing deployment and maintainance
+      </small>
+    </div>
+
+    <div className='flex-1  h-30 m-8 border-solid border-2 border-gray-700'>
+    <TbSettingsFilled color='grey' size={50} />
+    <article >Software Assets</article>
+      <small>
+        All aspects of Your Software including purchasing deployment and maintainance
+      </small>
+
+
+    </div>
     
   </div>
 </section>
