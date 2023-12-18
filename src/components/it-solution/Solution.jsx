@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { FaTools } from "react-icons/fa";
 import { TbSettingsFilled } from "react-icons/tb";
 import "./solution.css"
 
@@ -26,31 +27,45 @@ const Solution = () => {
   </div>
 
   <div className='justify-center text-white  flex lg:ml-10 sm:ml-0 mt-12'>
-    <div className='flex-1 w-20 m-8'>
-    <TbSettingsFilled color='grey' size={50} />
-    <article >Software Assets</article>
-      <small>
-        All aspects of Your Software including purchasing deployment and maintainance
-      </small>
-    </div>
-
-    <div className='flex-1  m-8'>
-    <TbSettingsFilled color='grey' size={50} />
-    <article >Software Assets</article>
-      <small>
-        All aspects of Your Software including purchasing deployment and maintainance
-      </small>
-    </div>
-
-    <div className='flex-1  h-30 m-8 border-solid border-2 border-gray-700'>
-    <TbSettingsFilled color='grey' size={50} />
-    <article >Software Assets</article>
-      <small>
-        All aspects of Your Software including purchasing deployment and maintainance
-      </small>
+  <div className='flex-1 h-30 m-8 p-4 flex flex-col justify-center items-center border-solid border-2 border-gray-700'>
+  <TbSettingsFilled color='grey' size={50} />
+  
+  <article className=' font-bold mt-2'>Software Assets</article>
+  <small className='text-gray-300 mt-4'>
+    All aspects of Your Software <br /> including purchasing<br />  deployment and maintenance
+  </small>
+  <a href="" className='mt-4'><FaRegArrowAltCircleRight size={20} color='white'/></a>
+</div>
 
 
-    </div>
+    <div className='flex-1 h-30 m-8 p-4 flex flex-col justify-center items-center border-solid border-2 border-gray-700'>
+  <FaTools color='grey' size={50} />
+  <article className=' font-bold mt-2' >Privileged Access</article>
+  <small className='text-gray-300 mt-4'>
+    Extend proven Tech best<br /> practices to Hr, Finance and<br />other service delivery.
+  </small>
+  <a href="" className='mt-4'><FaRegArrowAltCircleRight size={20} color='white'/></a>
+</div>
+
+
+    <div className='flex-1 h-30 m-8 p-4 flex flex-col justify-center items-center border-solid border-2 border-gray-700'>
+  <TbSettingsFilled color='grey' size={50} />
+  <article className=' font-bold mt-2'>Software Lincense</article>
+  <small className=' text-gray-300 mt-4'>
+    Build dynamic request <br /> templates with associated<br />  workflows and tasks.
+  </small>
+  <a href="" className='mt-4'><FaRegArrowAltCircleRight size={20} color='white'/></a>
+</div>
+
+<div className='flex-1 h-30 m-8 p-4 flex flex-col justify-center items-center border-solid border-2 border-gray-700'>
+  <TbSettingsFilled color='grey' size={50} />
+  <article className=' font-bold mt-2'>Software Lincense</article>
+  <small className=' text-gray-300 mt-4'>
+    Build dynamic request <br /> templates with associated<br />  workflows and tasks.
+  </small>
+  <a href="" className='mt-4'><FaRegArrowAltCircleRight size={20} color='white'/></a>
+</div>
+
     
   </div>
 </section>
