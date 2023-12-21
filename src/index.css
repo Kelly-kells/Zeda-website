@@ -23,6 +23,13 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.features-bg{
+  background-image: url(../../zeda-website/src/components/Assets/fabian-irsara-67l-QujB14w-unsplash.jpg);
+  background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
 @layer components {
   .max-container {
     max-width: 1400px;
